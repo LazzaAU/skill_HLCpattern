@@ -1,8 +1,8 @@
 <span style="color: #ff0000;"><strong>Using HLC Pattern skill </span>
 
+## OPTION 1
 - "Hey snips/Alice"
 
-## OPTION 1
 then try one of the following 
 
 - "change your LED pattern please",
@@ -14,11 +14,13 @@ then try one of the following
 When asked which option to use, select one of those options by saying
 
 (exchange # for the number of your choice)
+
 - "option #" 
 - "number #"
 - "3"
 
 ## OPTION 2
+
 try asking 
 
 - "hey snips/alice"
@@ -36,11 +38,13 @@ The Pattern options are :
 
 <span style="color: green;">NOTE FOR WHEN USING THIS METHOD:</span>
 Due to the weird naming of the last two options try pronouncing it like the following 
+
 (note the spaces)
+
 - p g a s
 - k i boost
 
-Also some ASR's like poketshinx dont like the word LEDs. So a good default utternce, 
+Also some ASR's like pocketsphinx dont like the word LEDs. So a good default utternce, 
 (but a little less natural), would be 
 
 - "change alice light to google"
