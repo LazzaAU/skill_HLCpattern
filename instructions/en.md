@@ -44,14 +44,14 @@ Due to the weird naming of the last two options try pronouncing it like the foll
 - p g a s
 - k i boost
 
-Also some ASR's like pocketsphinx dont like the word LEDs. So a good default utternce, 
+Also some ASR's like pocketsphinx don't like the word LEDs. So a good default utternce, 
 (but a little less natural), would be 
 
-- "change alice light to google"
+- "change alice lights to google"
 
 or
 
-- "change alice light"
+- "change alice lights"
 
 <span style="color: green;">NOTE:</span> During this process Alice will action some 'sudo' commands. They are as follows:
 
