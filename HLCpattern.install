@@ -6,7 +6,7 @@
 	"category": "assistance",
 	"author": "lazza",
 	"maintainers": [],
-	"desc": "Change pre configured LED light patterns of your devices",
+	"desc": "Change between pre configured LED light patterns of your devices",
 	"aliceMinVersion": "1.0.0-b3",
 	"pipRequirements": [],
 	"systemRequirements": [],

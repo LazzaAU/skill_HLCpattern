@@ -11,7 +11,7 @@ class HLCpattern(AliceSkill):
 	Description: Change between pre configured led light patterns of your devices.
 
 	NOTE for future. If extra patterns are added in the future. Update line 20 and talk file
-	line for the pointer on line 51
+	line for the pointer on line 51 and also update line 60
 	"""
 
 
@@ -56,6 +56,7 @@ class HLCpattern(AliceSkill):
 	def selectPatternOption(self, session: DialogSession):
 		if 'number' in session.slots:
 			self._choosenPatternOption = int(session.slotValue('number') - 1)
+			# Capture those that can't listen or count
 			if self._choosenPatternOption > 4 or self._choosenPatternOption < 0:
 				self.endDialog(
 					sessionId=session.sessionId,
