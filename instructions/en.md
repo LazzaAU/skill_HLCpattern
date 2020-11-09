@@ -1,6 +1,6 @@
 <span style="color: #ff0000;"><strong>Using HLC Pattern skill </span>
 
-## OPTION 1
+##<span style="color: blue;">OPTION 1</span>
 - "Hey snips/Alice"
 
 then try one of the following 
@@ -19,7 +19,8 @@ When asked which option to use, select one of those options by saying
 - "number #"
 - "3"
 
-## OPTION 2
+##<span style="color: blue;">OPTION 2</span>
+
 
 try asking 
 
