@@ -1,4 +1,3 @@
-
 from pathlib import Path
 import re
 from core.base.model.AliceSkill import AliceSkill
@@ -11,8 +10,8 @@ class HLCpattern(AliceSkill):
 	Author: lazza
 	Description: Change between pre configured led light patterns of your devices.
 
-	NOTE for future. If extra patterns are added in the future. Update line 20 and line talk file
-	line for the pointer on line 42
+	NOTE for future. If extra patterns are added in the future. Update line 20 and talk file
+	line for the pointer on line 51
 	"""
 
 
@@ -27,6 +26,12 @@ class HLCpattern(AliceSkill):
 
 	@IntentHandler('ChangeLedPattern')
 	def ledPatternIntent(self, session: DialogSession, **_kwargs):
+		# re init some vars
+		self._exitCode = False
+		self._choosenPatternOption = 0
+		# Path to the temporary file that we will edit initially
+		self._hlcTempPath = f'{self.skillPath}/HermesledControl.service'
+
 		# If there is no service file then exit
 		if not self._hlcServiceFilePath.exists():
 			self.endDialog(
@@ -35,8 +40,9 @@ class HLCpattern(AliceSkill):
 			)
 			return
 
-		# Path to the temporary file that we will edit initially
-		self._hlcTempPath = f'{self.skillPath}/HermesledControl.service'
+		# Check if user specified the pattern name
+		if self.checkIfNameInUtterance(session):
+			return
 
 		self.continueDialog(
 			sessionId=session.sessionId,
@@ -56,13 +62,32 @@ class HLCpattern(AliceSkill):
 					text=self.randomTalk(text="dialogMessage3")
 				)
 				return
+		# Let user know Lights will be adjusted
+		self.sayGoingToProceed(session)
 
+		self.modifyHLCServiceFile()
+
+
+	def checkIfNameInUtterance(self, session) -> bool:
+		# If user has given the pattern to use in the intial utterance
+		if 'namedPattern' in session.slots:
+			namedPattern: str = session.slotValue('namedPattern')
+			index = self._patternOptions.index(namedPattern.replace(' ', ''))
+			self._choosenPatternOption = index
+
+			self.sayGoingToProceed(session)
+
+			self.modifyHLCServiceFile()
+			return True
+		else:
+			return False
+
+
+	def sayGoingToProceed(self, session):
 		self.endDialog(
 			sessionId=session.sessionId,
 			text=self.randomTalk(text="dialogMessage4")
 		)
-
-		self.modifyHLCServiceFile()
 
 
 	def modifyHLCServiceFile(self):
@@ -86,18 +111,20 @@ class HLCpattern(AliceSkill):
 			file.write(newData)
 
 		if not self._exitCode:
-			self.copyBackInPlace()
+			self._runSystemCommands()
 
 
 	def checkExistingPattern(self, line):
-
+		"""
+		1. Cancel if the current pattern is the same as requested
+		2. re.sub the new pattern to the current line
+		"""
 		for item in self._patternOptions:
 			existingPattern = re.findall(f'--pattern={item}', line)
 			if not existingPattern:
 				continue
 
 			newPatternChoice = f'--pattern={self._patternOptions[self._choosenPatternOption]}'
-			self.logInfo(f'Changing to {newPatternChoice} from {existingPattern[0]}')
 			if existingPattern[0] == newPatternChoice:
 				self.say(
 					text=self.randomTalk(text="dialogMessage5")
@@ -111,7 +138,7 @@ class HLCpattern(AliceSkill):
 				return line
 
 
-	def copyBackInPlace(self):
+	def _runSystemCommands(self):
 
 		self.logWarning('About to use sudo while doing the following operations...')
 		self.Commons.runSystemCommand(f'sudo cp -rf {self._hlcTempPath} {self._hlcServiceFilePath}'.split())
@@ -121,11 +148,11 @@ class HLCpattern(AliceSkill):
 		self.Commons.runSystemCommand(f'sudo systemctl restart hermesledcontrol'.split())
 		self.logInfo(f'Now restarting the HLC service and removing temp files')
 		self.cleanupTempFiles()
-
 		self.say(
 			text=self.randomTalk(text="dialogMessage6")
 		)
 
 
 	def cleanupTempFiles(self):
+		""" Delete temporary file """
 		self.Commons.runSystemCommand(f'rm -rf {self._hlcTempPath}'.split())

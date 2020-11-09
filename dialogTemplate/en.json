@@ -1,6 +1,29 @@
 {
 	"skill": "HLCpattern",
 	"slotTypes": [
+		{
+			"name": "namedPattern",
+			"matchingStrictness": null,
+			"automaticallyExtensible": true,
+			"useSynonyms": false,
+			"values": [
+				{
+					"value": "google"
+				},
+				{
+					"value": "alexa"
+				},
+				{
+					"value": "project alice"
+				},
+				{
+					"value": "p g a s"
+				},
+				{
+					"value": "ki boost"
+				}
+			]
+		}
 	],
 	"intents": [
 		{
@@ -9,9 +32,24 @@
 			"utterances": [
 				"change your LED pattern please",
 				"change your h l c pattern ",
-				"change your LED pattern",
+				"change your light pattern",
+				"change Alice lights",
 				"set a new LED pattern",
-				"change leds"
+				"change leds",
+				"change default pattern to {google:=>namedPattern}",
+				"change to {google:=>namedPattern} led pattern",
+				"change led pattern to {p g a s:=>namedPattern}",
+				"change alice lights to {alexa:=>namedPattern}",
+				"set LEDs to {alexa:=>namedPattern}",
+				"change LEDs to {ki boost:=>namedPattern}"
+			],
+			"slots": [
+				{
+					"name": "namedPattern",
+					"required": false,
+					"type": "namedPattern",
+					"missingQuestion": ""
+				}
 			]
 		},
 		{

@@ -1,54 +1,53 @@
 {
 	"dialogMessage1": {
 		"default": [
-			"Sorry but it looks like you dont have Hermes LED control installed. Exiting"
+			"Sorry but it looks like you dont have Hermes LED control installed. Exiting",
+			"looks to me like you don't have LED control installed. I won't becontinuing",
+			"Hmmm. Are you sure HLC is installed and enabled?"
 		],
 		"short": [
-			""
+			"error. H L C not installed ?"
 		]
 	},
 	"dialogMessage2": {
 		"default": [
 			"Please choose one of the following. Option 1, Google. Option 2, Alexa. Option 3, Project Alice. Option 4, P G A S. or option 5, Ki boost."
-		],
-		"short": [
-			""
 		]
 	},
 	"dialogMessage3": {
 		"default": [
-			"Sorry but you didn\\'t choose a valid option. Please start the process again."
+			"Sorry but you didn't choose a valid option. Please start the process again.",
+			"Please try again as that didn't seem to be a valid option from what i read out"
 		],
 		"short": [
-			""
+			"Error. Try again"
 		]
 	},
 	"dialogMessage4": {
 		"default": [
-			"ok let\\'s do this"
+			"ok let's do this"
 		],
 		"short": [
-			""
+			"ok"
 		]
 	},
 	"dialogMessage5": {
 		"default": [
-			"You\\'re already using that pattern. So i won\\'t be changing anything"
+			"You're already using that pattern, so I won't be changing anything.",
+			"Seems your already using that pattern. Please try again.",
+			"Thanks for waking me up. However your already using that pattern. Try again."
 		],
 		"short": [
-			""
+			"Pattern already in use"
 		]
 	},
 	"dialogMessage6": {
 		"default": [
-			"The light pattern has been updated. Ask me something to check it out"
+			"The light pattern has been updated. Do they sparkle now like my eyes do when i get to help you ?",
+			"I've changed the pattern. How does it look ?. Pretty fancy huh ?"
 		],
 		"short": [
-			""
+			"updated light pattern"
 		]
-	},
-	"dummy": [
-		"example sentence",
-		"another example sentence"
-	]
+	}
 }

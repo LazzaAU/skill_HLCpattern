@@ -2,6 +2,7 @@
 
 - "Hey snips/Alice"
 
+## OPTION 1
 then try one of the following 
 
 - "change your LED pattern please",
@@ -16,6 +17,37 @@ When asked which option to use, select one of those options by saying
 - "option #" 
 - "number #"
 - "3"
+
+## OPTION 2
+try asking 
+
+- "hey snips/alice"
+
+- "change LEDs to google"
+- "change LED pattern to alexa"
+
+The Pattern options are :
+
+- google
+- alexa
+- projectalice
+- pgas
+- kiboost
+
+<span style="color: green;">NOTE FOR WHEN USING THIS METHOD:</span>
+Due to the weird naming of the last two options try pronouncing it like the following 
+(note the spaces)
+- p g a s
+- k i boost
+
+Also some ASR's like poketshinx dont like the word LEDs. So a good default utternce, 
+(but a little less natural), would be 
+
+- "change alice light to google"
+
+or
+
+- "change alice light"
 
 <span style="color: green;">NOTE:</span> During this process Alice will action some 'sudo' commands. They are as follows:
 
