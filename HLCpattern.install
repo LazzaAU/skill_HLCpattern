@@ -1,0 +1,19 @@
+{
+	"name": "HLCpattern",
+	"speakableName": "LED pattern selector",
+	"version": "1.0.0",
+	"icon": "fas fa-traffic-light",
+	"category": "assistance",
+	"author": "lazza",
+	"maintainers": [],
+	"desc": "Change pre configured LED light patterns of your devices",
+	"aliceMinVersion": "1.0.0-b3",
+	"pipRequirements": [],
+	"systemRequirements": [],
+	"conditions": {
+		"lang": [
+			"en"
+		],
+		"asrArbitraryCapture": true
+	}
+}

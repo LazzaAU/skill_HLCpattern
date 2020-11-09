@@ -1,0 +1,36 @@
+{
+	"skill": "HLCpattern",
+	"slotTypes": [
+	],
+	"intents": [
+		{
+			"name": "ChangeLedPattern",
+			"enabledByDefault": true,
+			"utterances": [
+				"change your LED pattern please",
+				"change your h l c pattern ",
+				"change your LED pattern",
+				"set a new LED pattern",
+				"change leds"
+			]
+		},
+		{
+			"name": "patternOption",
+			"enabledByDefault": false,
+			"utterances": [
+				"number {4:=>number}",
+				"{four:=>number}",
+				"{3:=>number}",
+				"option {2:=>number}"
+			],
+			"slots": [
+				{
+					"name": "number",
+					"required": false,
+					"type": "snips/number",
+					"missingQuestion": ""
+				}
+			]
+		}
+	]
+}

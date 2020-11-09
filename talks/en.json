@@ -1,0 +1,54 @@
+{
+	"dialogMessage1": {
+		"default": [
+			"Sorry but it looks like you dont have Hermes LED control installed. Exiting"
+		],
+		"short": [
+			""
+		]
+	},
+	"dialogMessage2": {
+		"default": [
+			"Please choose one of the following. Option 1, Google. Option 2, Alexa. Option 3, Project Alice. Option 4, P G A S. or option 5, Ki boost."
+		],
+		"short": [
+			""
+		]
+	},
+	"dialogMessage3": {
+		"default": [
+			"Sorry but you didn\\'t choose a valid option. Please start the process again."
+		],
+		"short": [
+			""
+		]
+	},
+	"dialogMessage4": {
+		"default": [
+			"ok let\\'s do this"
+		],
+		"short": [
+			""
+		]
+	},
+	"dialogMessage5": {
+		"default": [
+			"You\\'re already using that pattern. So i won\\'t be changing anything"
+		],
+		"short": [
+			""
+		]
+	},
+	"dialogMessage6": {
+		"default": [
+			"The light pattern has been updated. Ask me something to check it out"
+		],
+		"short": [
+			""
+		]
+	},
+	"dummy": [
+		"example sentence",
+		"another example sentence"
+	]
+}
