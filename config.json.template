@@ -1,0 +1,8 @@
+{
+	"disableHLConSleep": {
+		"defaultValue": false,
+		"dataType": "boolean",
+		"isSensitive": false,
+		"description": "Disable HLC at night time"
+	}
+}

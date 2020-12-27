@@ -157,3 +157,17 @@ class HLCpattern(AliceSkill):
 	def cleanupTempFiles(self):
 		""" Delete temporary file """
 		self.Commons.runSystemCommand(f'rm -rf {self._hlcTempPath}'.split())
+
+
+	def onSleep(self):
+		super().onSleep()
+		if self.getConfig('disableHLConSleep'):
+			self.Commons.runSystemCommand('sudo systemctl stop hermesledcontrol'.split())
+			self.logInfo('Disabled HLC, sleep well')
+
+
+	def onWakeup(self):
+		super().onWakeup()
+		if self.getConfig('disableHLConSleep'):
+			self.Commons.runSystemCommand('sudo systemctl start hermesledcontrol'.split())
+			self.logInfo('Good morning, HLC has been re enabled')
