@@ -1,7 +1,7 @@
 {
 	"name": "HLCpattern",
 	"speakableName": "LED pattern selector",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"icon": "fas fa-traffic-light",
 	"category": "assistance",
 	"author": "lazza",

@@ -1,6 +1,6 @@
-##Using HLC Pattern skill
+## Using HLC Pattern skill
 
-###OPTION 1
+### OPTION 1
 - "Hey snips/Alice"
 
 then try one of the following 
@@ -19,7 +19,7 @@ When asked which option to use, select one of those options by saying
 - "number #"
 - "3"
 
-###OPTION 2
+### OPTION 2
 
 
 try asking 
@@ -38,7 +38,7 @@ The Pattern options are :
 - kiboost
 
 
-####NOTE FOR WHEN USING THIS METHOD:
+#### NOTE FOR WHEN USING THIS METHOD:
 Due to the weird naming of the last two options try pronouncing it like the following 
 
 (note the spaces)
@@ -55,7 +55,7 @@ or
 
 - "change alice lights"
 
-####NOTE:
+#### NOTE:
 During this process Alice will action some 'sudo' commands. They are as follows:
 
 - cp command : to copy the modified service file back to /etc/systemd/system/hermesledcontrol.service
