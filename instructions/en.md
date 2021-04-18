@@ -1,6 +1,6 @@
-<span style="color: #ff0000;"><strong>Using HLC Pattern skill </span>
+##Using HLC Pattern skill
 
-##<span style="color: blue;">OPTION 1</span>
+###OPTION 1
 - "Hey snips/Alice"
 
 then try one of the following 
@@ -19,7 +19,7 @@ When asked which option to use, select one of those options by saying
 - "number #"
 - "3"
 
-##<span style="color: blue;">OPTION 2</span>
+###OPTION 2
 
 
 try asking 
@@ -37,7 +37,8 @@ The Pattern options are :
 - pgas
 - kiboost
 
-<span style="color: green;">NOTE FOR WHEN USING THIS METHOD:</span>
+
+####NOTE FOR WHEN USING THIS METHOD:
 Due to the weird naming of the last two options try pronouncing it like the following 
 
 (note the spaces)
@@ -54,7 +55,8 @@ or
 
 - "change alice lights"
 
-<span style="color: green;">NOTE:</span> During this process Alice will action some 'sudo' commands. They are as follows:
+####NOTE:
+During this process Alice will action some 'sudo' commands. They are as follows:
 
 - cp command : to copy the modified service file back to /etc/systemd/system/hermesledcontrol.service
 - sudo systemctl daemon-reload
