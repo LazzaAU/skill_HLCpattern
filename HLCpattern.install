@@ -1,19 +1,19 @@
 {
-	"name": "HLCpattern",
-	"speakableName": "LED pattern selector",
-	"version": "1.1.2",
-	"icon": "fas fa-traffic-light",
-	"category": "assistance",
-	"author": "lazza",
-	"maintainers": [],
-	"desc": "Change between pre configured LED light patterns of your devices",
-	"aliceMinVersion": "1.0.0-b3",
-	"pipRequirements": [],
-	"systemRequirements": [],
-	"conditions": {
-		"lang": [
-			"en"
-		],
-		"asrArbitraryCapture": true
-	}
+    "name": "HLCpattern",
+    "speakableName": "LED pattern selector",
+    "version": "1.1.3",
+    "icon": "fas fa-traffic-light",
+    "category": "assistance",
+    "author": "lazza",
+    "maintainers": [],
+    "desc": "Change between pre configured LED light patterns of your devices",
+    "aliceMinVersion": "1.0.0-b3",
+    "pipRequirements": [],
+    "systemRequirements": [],
+    "conditions": {
+        "lang": [
+            "en"
+        ],
+        "asrArbitraryCapture": true
+    }
 }
